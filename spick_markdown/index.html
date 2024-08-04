@@ -1,0 +1,2204 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../teil3pauftrag/" rel="prev"/>
+<link href="../installationsjournal/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.31" name="generator"/>
+<title>SpickMarkdown - M159</title>
+<link href="../assets/stylesheets/main.3cba04c6.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-light.min.css" rel="stylesheet"/>
+<!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ace.js" type="text/javascript"></script>
+<script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.5/ext-language_tools.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.asm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/js/jquery.terminal.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.34.0/css/jquery.terminal.min.css" rel="stylesheet"/>
+<script src="../pyodide-mkdocs/utils.js"></script>
+<script src="../pyodide-mkdocs/interpreter.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../pyodide-mkdocs/pyoditeur.css" rel="stylesheet"/>
+<link href="../qcm/qcm.css" rel="stylesheet"/>
+<input autocomplete="off" class="md-toggle" data-ace-dark-mode="tomorrow_night_bright" data-ace-light-mode="crimson_editor" id="ace_palette" type="checkbox"/>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="cyan" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#md-elemente">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="M159" class="md-header__button md-logo" data-md-component="logo" href=".." title="M159">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            M159
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              SpickMarkdown
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="cyan" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="M159" class="md-nav__button md-logo" data-md-component="logo" href=".." title="M159">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    M159
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Einführung
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Teil1 - Kerberos
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Teil1 - Kerberos
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../theorie/">
+<span class="md-ellipsis">
+    Theorie
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Kerberos-Aufgaben
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Kerberos-Aufgaben
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../kerbaufgabe/">
+<span class="md-ellipsis">
+    Kerberos-Schritte verstehen
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../kerbscreencast/">
+<span class="md-ellipsis">
+    Screencast Kerberos-Schritte
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Teil2 - praktische Aufgaben
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Teil2 - praktische Aufgaben
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../teil2einf/">
+<span class="md-ellipsis">
+    Einführung und Arbeitsplan
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab01/">
+<span class="md-ellipsis">
+    Arbeitsblatt 1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab02/">
+<span class="md-ellipsis">
+    Arbeitsblatt 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab03/">
+<span class="md-ellipsis">
+    Arbeitsblatt 3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab04/">
+<span class="md-ellipsis">
+    Arbeitsblatt 4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab05/">
+<span class="md-ellipsis">
+    Arbeitsblatt 5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab06/">
+<span class="md-ellipsis">
+    Arbeitsblatt 6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ab07/">
+<span class="md-ellipsis">
+    Arbeitsblatt 7
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Teil3 - Projekt
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Teil3 - Projekt
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../teil3pauftrag/">
+<span class="md-ellipsis">
+    Projektauftrag
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Spicks
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Spicks
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    SpickMarkdown
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    SpickMarkdown
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embed-pdfs">
+<span class="md-ellipsis">
+      Embed pdfs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embed-video">
+<span class="md-ellipsis">
+      Embed Video
+    </span>
+</a>
+<nav aria-label="Embed Video" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-1">
+<span class="md-ellipsis">
+      Version 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-3">
+<span class="md-ellipsis">
+      Version 3
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#links">
+<span class="md-ellipsis">
+      Links
+    </span>
+</a>
+<nav aria-label="Links" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link-offnet-sich-im-gleichen-tab">
+<span class="md-ellipsis">
+      Link öffnet sich im gleichen TAB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link-offnet-sich-in-neuem-tab">
+<span class="md-ellipsis">
+      Link öffnet sich in neuem TAB
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-tabs">
+<span class="md-ellipsis">
+      Content Tabs
+    </span>
+</a>
+<nav aria-label="Content Tabs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grouping-code-blocks">
+<span class="md-ellipsis">
+      Grouping code blocks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grouping-other-content">
+<span class="md-ellipsis">
+      Grouping other content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embedded-content">
+<span class="md-ellipsis">
+      Embedded content
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bilder-und-buttons">
+<span class="md-ellipsis">
+      Bilder und Buttons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tables">
+<span class="md-ellipsis">
+      Tables
+    </span>
+</a>
+<nav aria-label="Tables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-table">
+<span class="md-ellipsis">
+      Simple Table
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-table-with-alignment">
+<span class="md-ellipsis">
+      Simple Table with alignment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#table-with-icons">
+<span class="md-ellipsis">
+      Table with Icons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#left-aligned">
+<span class="md-ellipsis">
+      Left aligned
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-code-block">
+<span class="md-ellipsis">
+      Python Code Block
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonitions">
+<span class="md-ellipsis">
+      Admonitions
+    </span>
+</a>
+<nav aria-label="Admonitions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-ohne-eigenen-titel">
+<span class="md-ellipsis">
+      Note ohne eigenen Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-mit-eigenem-titel">
+<span class="md-ellipsis">
+      Note mit eigenem Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfache-textbox">
+<span class="md-ellipsis">
+      einfache Textbox
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-eingeklappt">
+<span class="md-ellipsis">
+      default eingeklappt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-ausgeklappt">
+<span class="md-ellipsis">
+      default ausgeklappt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-mit-inline-admonitions">
+<span class="md-ellipsis">
+      Text mit Inline-Admonitions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+<span class="md-ellipsis">
+      Note
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract">
+<span class="md-ellipsis">
+      ABSTRACT
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#info">
+<span class="md-ellipsis">
+      INFO
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tip">
+<span class="md-ellipsis">
+      TIP
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#success">
+<span class="md-ellipsis">
+      SUCCESS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question">
+<span class="md-ellipsis">
+      QUESTION
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#warning">
+<span class="md-ellipsis">
+      WARNING
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failure">
+<span class="md-ellipsis">
+      FAILURE
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#danger">
+<span class="md-ellipsis">
+      DANGER
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bug">
+<span class="md-ellipsis">
+      BUG
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      EXAMPLE
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zitat">
+<span class="md-ellipsis">
+      ZITAT
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-snippets">
+<span class="md-ellipsis">
+      Code Snippets
+    </span>
+</a>
+<nav aria-label="Code Snippets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-code-block-1">
+<span class="md-ellipsis">
+      simple Code Block 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-code-block-2">
+<span class="md-ellipsis">
+      simple Code Block 2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeblock-python">
+<span class="md-ellipsis">
+      Codeblock Python
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-block-mit-titel">
+<span class="md-ellipsis">
+      Code Block mit Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeblock-bash">
+<span class="md-ellipsis">
+      Codeblock Bash
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeblock-mit-annotations">
+<span class="md-ellipsis">
+      Codeblock mit Annotations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-code-fur-codeblock-mit-annotations">
+<span class="md-ellipsis">
+      Markdown Code für Codeblock mit Annotations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mit-linenumbers">
+<span class="md-ellipsis">
+      Mit Linenumbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#highlighting-specific-lines">
+<span class="md-ellipsis">
+      Highlighting specific lines
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#highlighting-specific-lines-with-linenumbers-and-arduino-code">
+<span class="md-ellipsis">
+      Highlighting specific lines with LineNumbers and Arduino Code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inline-code-block">
+<span class="md-ellipsis">
+      Inline Code Block
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emojis">
+<span class="md-ellipsis">
+      Emojis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-mit-fussnoten">
+<span class="md-ellipsis">
+      Text mit Fussnoten
+    </span>
+</a>
+<nav aria-label="Text mit Fussnoten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-code-fur-fussnoten">
+<span class="md-ellipsis">
+      Markdown Code für Fussnoten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrows-in-markdown">
+<span class="md-ellipsis">
+      Arrows in Markdown
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installationsjournal/">
+<span class="md-ellipsis">
+    InstJournal
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embed-pdfs">
+<span class="md-ellipsis">
+      Embed pdfs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embed-video">
+<span class="md-ellipsis">
+      Embed Video
+    </span>
+</a>
+<nav aria-label="Embed Video" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-1">
+<span class="md-ellipsis">
+      Version 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-3">
+<span class="md-ellipsis">
+      Version 3
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#links">
+<span class="md-ellipsis">
+      Links
+    </span>
+</a>
+<nav aria-label="Links" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link-offnet-sich-im-gleichen-tab">
+<span class="md-ellipsis">
+      Link öffnet sich im gleichen TAB
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#link-offnet-sich-in-neuem-tab">
+<span class="md-ellipsis">
+      Link öffnet sich in neuem TAB
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-tabs">
+<span class="md-ellipsis">
+      Content Tabs
+    </span>
+</a>
+<nav aria-label="Content Tabs" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grouping-code-blocks">
+<span class="md-ellipsis">
+      Grouping code blocks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grouping-other-content">
+<span class="md-ellipsis">
+      Grouping other content
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embedded-content">
+<span class="md-ellipsis">
+      Embedded content
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bilder-und-buttons">
+<span class="md-ellipsis">
+      Bilder und Buttons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tables">
+<span class="md-ellipsis">
+      Tables
+    </span>
+</a>
+<nav aria-label="Tables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-table">
+<span class="md-ellipsis">
+      Simple Table
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-table-with-alignment">
+<span class="md-ellipsis">
+      Simple Table with alignment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#table-with-icons">
+<span class="md-ellipsis">
+      Table with Icons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#left-aligned">
+<span class="md-ellipsis">
+      Left aligned
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-code-block">
+<span class="md-ellipsis">
+      Python Code Block
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonitions">
+<span class="md-ellipsis">
+      Admonitions
+    </span>
+</a>
+<nav aria-label="Admonitions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-ohne-eigenen-titel">
+<span class="md-ellipsis">
+      Note ohne eigenen Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note-mit-eigenem-titel">
+<span class="md-ellipsis">
+      Note mit eigenem Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#einfache-textbox">
+<span class="md-ellipsis">
+      einfache Textbox
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-eingeklappt">
+<span class="md-ellipsis">
+      default eingeklappt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-ausgeklappt">
+<span class="md-ellipsis">
+      default ausgeklappt
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-mit-inline-admonitions">
+<span class="md-ellipsis">
+      Text mit Inline-Admonitions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#note">
+<span class="md-ellipsis">
+      Note
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract">
+<span class="md-ellipsis">
+      ABSTRACT
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#info">
+<span class="md-ellipsis">
+      INFO
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tip">
+<span class="md-ellipsis">
+      TIP
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#success">
+<span class="md-ellipsis">
+      SUCCESS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#question">
+<span class="md-ellipsis">
+      QUESTION
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#warning">
+<span class="md-ellipsis">
+      WARNING
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#failure">
+<span class="md-ellipsis">
+      FAILURE
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#danger">
+<span class="md-ellipsis">
+      DANGER
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bug">
+<span class="md-ellipsis">
+      BUG
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      EXAMPLE
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zitat">
+<span class="md-ellipsis">
+      ZITAT
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-snippets">
+<span class="md-ellipsis">
+      Code Snippets
+    </span>
+</a>
+<nav aria-label="Code Snippets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-code-block-1">
+<span class="md-ellipsis">
+      simple Code Block 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-code-block-2">
+<span class="md-ellipsis">
+      simple Code Block 2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeblock-python">
+<span class="md-ellipsis">
+      Codeblock Python
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-block-mit-titel">
+<span class="md-ellipsis">
+      Code Block mit Titel
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeblock-bash">
+<span class="md-ellipsis">
+      Codeblock Bash
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codeblock-mit-annotations">
+<span class="md-ellipsis">
+      Codeblock mit Annotations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-code-fur-codeblock-mit-annotations">
+<span class="md-ellipsis">
+      Markdown Code für Codeblock mit Annotations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mit-linenumbers">
+<span class="md-ellipsis">
+      Mit Linenumbers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#highlighting-specific-lines">
+<span class="md-ellipsis">
+      Highlighting specific lines
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#highlighting-specific-lines-with-linenumbers-and-arduino-code">
+<span class="md-ellipsis">
+      Highlighting specific lines with LineNumbers and Arduino Code
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inline-code-block">
+<span class="md-ellipsis">
+      Inline Code Block
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#emojis">
+<span class="md-ellipsis">
+      Emojis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-mit-fussnoten">
+<span class="md-ellipsis">
+      Text mit Fussnoten
+    </span>
+</a>
+<nav aria-label="Text mit Fussnoten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-code-fur-fussnoten">
+<span class="md-ellipsis">
+      Markdown Code für Fussnoten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrows-in-markdown">
+<span class="md-ellipsis">
+      Arrows in Markdown
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div><h1 id="md-elemente"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.</span> MD Elemente<a class="headerlink" href="#md-elemente" title="Permanent link">#</a></h1>
+<h2 id="embed-pdfs"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.1</span> Embed pdfs<a class="headerlink" href="#embed-pdfs" title="Permanent link">#</a></h2>
+<p><embed alt="Mein PDF dazu" src="../pdf/Manual_IoTEducationBoard.pdf" style="min-height:50vh;width:100%" type="application/pdf"/></p>
+<h2 id="embed-video"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.2</span> Embed Video<a class="headerlink" href="#embed-video" title="Permanent link">#</a></h2>
+<p>Siehe: https://pypi.org/project/mkdocs-video/</p>
+<p><a href="https://pypi.org/project/mkdocs-video/">https://pypi.org/project/mkdocs-video/</a></p>
+<h3 id="version-1"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.2.1</span> Version 1<a class="headerlink" href="#version-1" title="Permanent link">#</a></h3>
+<p>Chrome start das Video automatisch.
+Firefox nicht.</p>
+<p></p><div class="video-container"><iframe allowfullscreen="" alt="type:video" frameborder="0" src="../video/M159-KerberosScreencast.mov" style="position:relative;width:100%;height:22.172vw"></iframe></div>
+<h3 id="version-3"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.2.2</span> Version 3<a class="headerlink" href="#version-3" title="Permanent link">#</a></h3>
+<p>Lorem ipsum dolor sit amet</p>
+<p></p><div class="video-container"><iframe allowfullscreen="" alt="type:video" frameborder="0" src="https://www.youtube.com/embed/LXb3EKWsInQ" style="position:relative;width:100%;height:22.172vw"></iframe></div>
+<h2 id="links"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.3</span> Links<a class="headerlink" href="#links" title="Permanent link">#</a></h2>
+<h3 id="link-offnet-sich-im-gleichen-tab"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.3.1</span> Link öffnet sich im gleichen TAB<a class="headerlink" href="#link-offnet-sich-im-gleichen-tab" title="Permanent link">#</a></h3>
+<p>Die Modulidentifikation finden Sie bei: </p>
+<p><a href="https://modulbaukasten.ch">Modulbaukasten ICT Schweiz</a></p>
+<p>Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>[Modulbaukasten ICT Schweiz](https://modulbaukasten.ch).
+</span></code></pre></div>
+<h3 id="link-offnet-sich-in-neuem-tab"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.3.2</span> Link öffnet sich in neuem TAB<a class="headerlink" href="#link-offnet-sich-in-neuem-tab" title="Permanent link">#</a></h3>
+<p><a href="https://modulbaukasten.ch" target="_blank">Modulbaukasten ICT Schweiz</a></p>
+<p>Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>[Modulbaukasten ICT Schweiz](https://modulbaukasten.ch){:target="_blank"}
+</span></code></pre></div>
+<h2 id="content-tabs"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.4</span> Content Tabs<a class="headerlink" href="#content-tabs" title="Permanent link">#</a></h2>
+<h3 id="grouping-code-blocks"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.4.1</span> Grouping code blocks<a class="headerlink" href="#grouping-code-blocks" title="Permanent link">#</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Markdown-Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>=== "C"
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    ``` c
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    #include &lt;stdio.h&gt;
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>    int main(void) {
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>      printf("Hello world!\n");
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>      return 0;
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>    }
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>    ```
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>=== "C++"
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>    ``` c++
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>    #include &lt;iostream&gt;
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>    int main(void) {
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>      std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>      return 0;
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>    }
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>    ```
+</span></code></pre></div>
+<h3 id="grouping-other-content"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.4.2</span> Grouping other content<a class="headerlink" href="#grouping-other-content" title="Permanent link">#</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="" id="__tabbed_2_1" name="__tabbed_2" type="radio"/><input id="__tabbed_2_2" name="__tabbed_2" type="radio"/><div class="tabbed-labels"><label for="__tabbed_2_1">Unordered list</label><label for="__tabbed_2_2">Ordered list</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Sed sagittis eleifend rutrum</li>
+<li>Donec vitae suscipit est</li>
+<li>Nulla tempor lobortis orci</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Sed sagittis eleifend rutrum</li>
+<li>Donec vitae suscipit est</li>
+<li>Nulla tempor lobortis orci</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Markdown-Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>=== "Unordered list"
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>    * Sed sagittis eleifend rutrum
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>    * Donec vitae suscipit est
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>    * Nulla tempor lobortis orci
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>=== "Ordered list"
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>    1. Sed sagittis eleifend rutrum
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>    2. Donec vitae suscipit est
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>    3. Nulla tempor lobortis orci
+</span></code></pre></div>
+<h3 id="embedded-content"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.4.3</span> Embedded content<a class="headerlink" href="#embedded-content" title="Permanent link">#</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">Unordered List</label><label for="__tabbed_3_2">Ordered List</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">*</span><span class="w"> </span>Sed sagittis eleifend rutrum
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">*</span><span class="w"> </span>Donec vitae suscipit est
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">*</span><span class="w"> </span>Nulla tempor lobortis orci
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">1.</span> Sed sagittis eleifend rutrum
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">2.</span> Donec vitae suscipit est
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">3.</span> Nulla tempor lobortis orci
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>Markdown-Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>!!! example
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a>    === "Unordered List"
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a>        ``` markdown
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>        * Sed sagittis eleifend rutrum
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a>        * Donec vitae suscipit est
+</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a>        * Nulla tempor lobortis orci
+</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a>        ```
+</span><span id="__span-8-10"><a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a>    === "Ordered List"
+</span><span id="__span-8-12"><a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a>        ``` markdown
+</span><span id="__span-8-14"><a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a>        1. Sed sagittis eleifend rutrum
+</span><span id="__span-8-15"><a href="#__codelineno-8-15" id="__codelineno-8-15" name="__codelineno-8-15"></a>        2. Donec vitae suscipit est
+</span><span id="__span-8-16"><a href="#__codelineno-8-16" id="__codelineno-8-16" name="__codelineno-8-16"></a>        3. Nulla tempor lobortis orci
+</span><span id="__span-8-17"><a href="#__codelineno-8-17" id="__codelineno-8-17" name="__codelineno-8-17"></a>        ```
+</span></code></pre></div>
+<h2 id="bilder-und-buttons"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.5</span> Bilder und Buttons<a class="headerlink" href="#bilder-und-buttons" title="Permanent link">#</a></h2>
+<p><a class="md-button" href="#">Subscribe to our newsletter</a></p>
+<p><a class="md-button md-button--primary" href="#">Subscribe to our newsletter</a></p>
+<p><a class="md-button" href="#">Send <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"></path></svg></span></a></p>
+<figure>
+<img alt="Image title" src="https://dummyimage.com/600x400/" width="300"/>
+<figcaption>Image caption</figcaption>
+</figure>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>&lt;figure markdown="span"&gt;
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>  ![Image title](https://dummyimage.com/600x400/){ width="300" }
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>  &lt;figcaption&gt;Image caption&lt;/figcaption&gt;
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>&lt;/figure&gt;
+</span></code></pre></div>
+<figure>
+<img alt="Image title" src="../img/screenshot.png" width="500"/>
+<figcaption>Screenshot</figcaption>
+</figure>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>&lt;figure markdown="span"&gt;
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>  ![Image title](img/screenshot.png){ width="500" }
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>  &lt;figcaption&gt;Screenshot&lt;/figcaption&gt;
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>&lt;/figure&gt;
+</span></code></pre></div>
+<figure>
+<img alt="Image title" src="../img/gibb_logo.png" width="50"/>
+<figcaption>gibb_logo</figcaption>
+</figure>
+<p>Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>&lt;figure markdown="span"&gt;
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>  ![Image title](img/gibb_logo.png){ width="50" }
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>  &lt;figcaption&gt;gibb_logo&lt;/figcaption&gt;
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>&lt;/figure&gt;
+</span></code></pre></div>
+<h2 id="tables"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.6</span> Tables<a class="headerlink" href="#tables" title="Permanent link">#</a></h2>
+<h3 id="simple-table"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.6.1</span> Simple Table<a class="headerlink" href="#simple-table" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>Code:
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>First Header | Second Header | Third Header
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a>------------ | ------------- | ------------
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>Content Cell | Content Cell  | Content Cell
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a>Content Cell | Content Cell  | Content Cell
+</span></code></pre></div>
+<h3 id="simple-table-with-alignment"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.6.2</span> Simple Table with alignment<a class="headerlink" href="#simple-table-with-alignment" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">First Header</th>
+<th style="text-align: center;">Second Header</th>
+<th style="text-align: right;">Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Left</td>
+<td style="text-align: center;">Center</td>
+<td style="text-align: right;">Right</td>
+</tr>
+<tr>
+<td style="text-align: left;">Left</td>
+<td style="text-align: center;">Center</td>
+<td style="text-align: right;">Right</td>
+</tr>
+</tbody>
+</table>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>First Header | Second Header | Third Header
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>:----------- |:-------------:| -----------:
+</span><span id="__span-13-3"><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>Left         | Center        | Right
+</span><span id="__span-13-4"><a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>Left         | Center        | Right
+</span></code></pre></div>
+<h3 id="table-with-icons"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.6.3</span> Table with Icons<a class="headerlink" href="#table-with-icons" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"></path></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"></path></svg></span> Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>| Method      | Description                          |
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>| ----------- | ------------------------------------ |
+</span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>| `GET`       | :material-check:     Fetch resource  |
+</span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>| `PUT`       | :material-check-all: Update resource |
+</span><span id="__span-14-5"><a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>| `DELETE`    | :material-close:     Delete resource |
+</span></code></pre></div>
+<h3 id="left-aligned"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.6.4</span> Left aligned<a class="headerlink" href="#left-aligned" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>GET</code></td>
+<td style="text-align: left;"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"></path></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>PUT</code></td>
+<td style="text-align: left;"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"></path></svg></span> Update resource</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DELETE</code></td>
+<td style="text-align: left;"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>| Method      | Description                          |
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>| :---------- | :----------------------------------- |
+</span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>| `GET`       | :material-check:     Fetch resource  |
+</span><span id="__span-15-4"><a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>| `PUT`       | :material-check-all: Update resource |
+</span><span id="__span-15-5"><a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>| `DELETE`    | :material-close:     Delete resource |
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"></path></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"></path></svg></span> Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>| Method      | Description                          |
+</span><span id="__span-16-2"><a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>| ----------- | ------------------------------------ |
+</span><span id="__span-16-3"><a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>| `GET`       | :material-check:     Fetch resource  |
+</span><span id="__span-16-4"><a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>| `PUT`       | :material-check-all: Update resource |
+</span><span id="__span-16-5"><a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>| `DELETE`    | :material-close:     Delete resource |
+</span></code></pre></div>
+<table border="1x solid black">
+<tr>
+<th>Col 1</th> <th>Col 2</th>
+</tr>
+<tr>
+<td style="background-color:#FF1744">1a</td><td>2a</td>
+</tr>
+<tr>
+<td style="background-color:#00CD33">1b</td><td>2b</td>
+</tr>
+</table>
+<p>Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>&lt;table border="1x solid black"&gt;
+</span><span id="__span-17-2"><a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>  &lt;tr&gt;
+</span><span id="__span-17-3"><a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>    &lt;th&gt;Col 1&lt;/th&gt; &lt;th&gt;Col 2&lt;/th&gt;
+</span><span id="__span-17-4"><a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>  &lt;/tr&gt;
+</span><span id="__span-17-5"><a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>  &lt;tr&gt;
+</span><span id="__span-17-6"><a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>    &lt;td style="background-color:#FF1744"&gt;1a&lt;/td&gt;&lt;td&gt;2a&lt;/td&gt;
+</span><span id="__span-17-7"><a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a>  &lt;/tr&gt;
+</span><span id="__span-17-8"><a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a>  &lt;tr&gt;
+</span><span id="__span-17-9"><a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a>    &lt;td style="background-color:#00CD33"&gt;1b&lt;/td&gt;&lt;td&gt;2b&lt;/td&gt;
+</span><span id="__span-17-10"><a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a>  &lt;/tr&gt;
+</span><span id="__span-17-11"><a href="#__codelineno-17-11" id="__codelineno-17-11" name="__codelineno-17-11"></a>&lt;/table&gt;
+</span></code></pre></div>
+<h3 id="python-code-block"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.6.5</span> Python Code Block<a class="headerlink" href="#python-code-block" title="Permanent link">#</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">def</span> <span class="nf">fn</span><span class="p">():</span>
+</span><span id="__span-18-2"><a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>    <span class="k">pass</span>
+</span></code></pre></div>
+<h2 id="admonitions"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7</span> Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">#</a></h2>
+<h3 id="note-ohne-eigenen-titel"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.1</span> Note ohne eigenen Titel<a class="headerlink" href="#note-ohne-eigenen-titel" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>!!! note
+</span><span id="__span-19-2"><a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-19-4"><a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-19-5"><a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="note-mit-eigenem-titel"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.2</span> Note mit eigenem Titel<a class="headerlink" href="#note-mit-eigenem-titel" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Phasellus posuere in sem ut cursus</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>!!! note "Phasellus posuere in sem ut cursus"
+</span><span id="__span-20-2"><a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-20-4"><a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-20-5"><a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="einfache-textbox"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.3</span> einfache Textbox<a class="headerlink" href="#einfache-textbox" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>!!! note ""
+</span><span id="__span-21-2"><a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-21-4"><a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-21-5"><a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="default-eingeklappt"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.4</span> default eingeklappt<a class="headerlink" href="#default-eingeklappt" title="Permanent link">#</a></h3>
+<details class="note">
+<summary>Note</summary>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</details>
+<p>Markdown-Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>??? note
+</span><span id="__span-22-2"><a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-22-4"><a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-22-5"><a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="default-ausgeklappt"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.5</span> default ausgeklappt<a class="headerlink" href="#default-ausgeklappt" title="Permanent link">#</a></h3>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</details>
+<p>Markdown-Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>???+ note
+</span><span id="__span-23-2"><a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-23-4"><a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-23-5"><a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="text-mit-inline-admonitions"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.6</span> Text mit Inline-Admonitions<a class="headerlink" href="#text-mit-inline-admonitions" title="Permanent link">#</a></h3>
+<div class="admonition info inline end">
+<p class="admonition-title">Lorem ipsum</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code end:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>!!! info inline end "Lorem ipsum"
+</span><span id="__span-24-2"><a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a href="#__codelineno-24-3" id="__codelineno-24-3" name="__codelineno-24-3"></a>    Lorem ipsum dolor sit amet, consectetur
+</span><span id="__span-24-4"><a href="#__codelineno-24-4" id="__codelineno-24-4" name="__codelineno-24-4"></a>    adipiscing elit. Nulla et euismod nulla.
+</span><span id="__span-24-5"><a href="#__codelineno-24-5" id="__codelineno-24-5" name="__codelineno-24-5"></a>    Curabitur feugiat, tortor non consequat
+</span><span id="__span-24-6"><a href="#__codelineno-24-6" id="__codelineno-24-6" name="__codelineno-24-6"></a>    finibus, justo purus auctor massa, nec
+</span><span id="__span-24-7"><a href="#__codelineno-24-7" id="__codelineno-24-7" name="__codelineno-24-7"></a>    semper lorem quam in massa.
+</span></code></pre></div>
+<div class="admonition info inline">
+<p class="admonition-title">Lorem ipsum</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+Markdown-Code end:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a>!!! info inline "Lorem ipsum"
+</span><span id="__span-25-2"><a href="#__codelineno-25-2" id="__codelineno-25-2" name="__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a href="#__codelineno-25-3" id="__codelineno-25-3" name="__codelineno-25-3"></a>    Lorem ipsum dolor sit amet, consectetur
+</span><span id="__span-25-4"><a href="#__codelineno-25-4" id="__codelineno-25-4" name="__codelineno-25-4"></a>    adipiscing elit. Nulla et euismod nulla.
+</span><span id="__span-25-5"><a href="#__codelineno-25-5" id="__codelineno-25-5" name="__codelineno-25-5"></a>    Curabitur feugiat, tortor non consequat
+</span><span id="__span-25-6"><a href="#__codelineno-25-6" id="__codelineno-25-6" name="__codelineno-25-6"></a>    finibus, justo purus auctor massa, nec
+</span><span id="__span-25-7"><a href="#__codelineno-25-7" id="__codelineno-25-7" name="__codelineno-25-7"></a>    semper lorem quam in massa.
+</span></code></pre></div>
+<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text !!! tip inline end "Hinweis als Tip</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Lorem ipsum</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Texxt Text Text Text Text Text Text !!! bug inline end "Hinweis zu Bug"</p>
+<div class="admonition info inline">
+<p class="admonition-title">Lorem ipsum</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<p>Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text ext Text Text Text Text Text</p>
+<h3 id="note"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.7</span> Note<a class="headerlink" href="#note" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<h3 id="abstract"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.8</span> ABSTRACT<a class="headerlink" href="#abstract" title="Permanent link">#</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-26-1"><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a>!!! abstract "Abstract"
+</span><span id="__span-26-2"><a href="#__codelineno-26-2" id="__codelineno-26-2" name="__codelineno-26-2"></a>
+</span><span id="__span-26-3"><a href="#__codelineno-26-3" id="__codelineno-26-3" name="__codelineno-26-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-26-4"><a href="#__codelineno-26-4" id="__codelineno-26-4" name="__codelineno-26-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-26-5"><a href="#__codelineno-26-5" id="__codelineno-26-5" name="__codelineno-26-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="info"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.9</span> INFO<a class="headerlink" href="#info" title="Permanent link">#</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-27-1"><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a>!!! info "Info"
+</span><span id="__span-27-2"><a href="#__codelineno-27-2" id="__codelineno-27-2" name="__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a href="#__codelineno-27-3" id="__codelineno-27-3" name="__codelineno-27-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-27-4"><a href="#__codelineno-27-4" id="__codelineno-27-4" name="__codelineno-27-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-27-5"><a href="#__codelineno-27-5" id="__codelineno-27-5" name="__codelineno-27-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="tip"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.10</span> TIP<a class="headerlink" href="#tip" title="Permanent link">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a>!!! tip "Tip"
+</span><span id="__span-28-2"><a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a href="#__codelineno-28-3" id="__codelineno-28-3" name="__codelineno-28-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-28-4"><a href="#__codelineno-28-4" id="__codelineno-28-4" name="__codelineno-28-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-28-5"><a href="#__codelineno-28-5" id="__codelineno-28-5" name="__codelineno-28-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="success"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.11</span> SUCCESS<a class="headerlink" href="#success" title="Permanent link">#</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-29-1"><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a>!!! success "Success"
+</span><span id="__span-29-2"><a href="#__codelineno-29-2" id="__codelineno-29-2" name="__codelineno-29-2"></a>
+</span><span id="__span-29-3"><a href="#__codelineno-29-3" id="__codelineno-29-3" name="__codelineno-29-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-29-4"><a href="#__codelineno-29-4" id="__codelineno-29-4" name="__codelineno-29-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-29-5"><a href="#__codelineno-29-5" id="__codelineno-29-5" name="__codelineno-29-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="question"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.12</span> QUESTION<a class="headerlink" href="#question" title="Permanent link">#</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-30-1"><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a>!!! question
+</span><span id="__span-30-2"><a href="#__codelineno-30-2" id="__codelineno-30-2" name="__codelineno-30-2"></a>
+</span><span id="__span-30-3"><a href="#__codelineno-30-3" id="__codelineno-30-3" name="__codelineno-30-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-30-4"><a href="#__codelineno-30-4" id="__codelineno-30-4" name="__codelineno-30-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-30-5"><a href="#__codelineno-30-5" id="__codelineno-30-5" name="__codelineno-30-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="warning"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.13</span> WARNING<a class="headerlink" href="#warning" title="Permanent link">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-31-1"><a href="#__codelineno-31-1" id="__codelineno-31-1" name="__codelineno-31-1"></a>!!! warning
+</span><span id="__span-31-2"><a href="#__codelineno-31-2" id="__codelineno-31-2" name="__codelineno-31-2"></a>
+</span><span id="__span-31-3"><a href="#__codelineno-31-3" id="__codelineno-31-3" name="__codelineno-31-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-31-4"><a href="#__codelineno-31-4" id="__codelineno-31-4" name="__codelineno-31-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-31-5"><a href="#__codelineno-31-5" id="__codelineno-31-5" name="__codelineno-31-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="failure"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.14</span> FAILURE<a class="headerlink" href="#failure" title="Permanent link">#</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-32-1"><a href="#__codelineno-32-1" id="__codelineno-32-1" name="__codelineno-32-1"></a>!!! failure "FEHLER"
+</span><span id="__span-32-2"><a href="#__codelineno-32-2" id="__codelineno-32-2" name="__codelineno-32-2"></a>
+</span><span id="__span-32-3"><a href="#__codelineno-32-3" id="__codelineno-32-3" name="__codelineno-32-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-32-4"><a href="#__codelineno-32-4" id="__codelineno-32-4" name="__codelineno-32-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-32-5"><a href="#__codelineno-32-5" id="__codelineno-32-5" name="__codelineno-32-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="danger"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.15</span> DANGER<a class="headerlink" href="#danger" title="Permanent link">#</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-33-1"><a href="#__codelineno-33-1" id="__codelineno-33-1" name="__codelineno-33-1"></a>!!! danger "GEFAHR"
+</span><span id="__span-33-2"><a href="#__codelineno-33-2" id="__codelineno-33-2" name="__codelineno-33-2"></a>
+</span><span id="__span-33-3"><a href="#__codelineno-33-3" id="__codelineno-33-3" name="__codelineno-33-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-33-4"><a href="#__codelineno-33-4" id="__codelineno-33-4" name="__codelineno-33-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-33-5"><a href="#__codelineno-33-5" id="__codelineno-33-5" name="__codelineno-33-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="bug"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.16</span> BUG<a class="headerlink" href="#bug" title="Permanent link">#</a></h3>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-34-1"><a href="#__codelineno-34-1" id="__codelineno-34-1" name="__codelineno-34-1"></a>!!! bug "BUG"
+</span><span id="__span-34-2"><a href="#__codelineno-34-2" id="__codelineno-34-2" name="__codelineno-34-2"></a>
+</span><span id="__span-34-3"><a href="#__codelineno-34-3" id="__codelineno-34-3" name="__codelineno-34-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-34-4"><a href="#__codelineno-34-4" id="__codelineno-34-4" name="__codelineno-34-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-34-5"><a href="#__codelineno-34-5" id="__codelineno-34-5" name="__codelineno-34-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="example"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.17</span> EXAMPLE<a class="headerlink" href="#example" title="Permanent link">#</a></h3>
+<div class="admonition example">
+<p class="admonition-title">BEISPIEL</p>
+<p>aaLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-35-1"><a href="#__codelineno-35-1" id="__codelineno-35-1" name="__codelineno-35-1"></a>!!! example "BEISPIEL"
+</span><span id="__span-35-2"><a href="#__codelineno-35-2" id="__codelineno-35-2" name="__codelineno-35-2"></a>
+</span><span id="__span-35-3"><a href="#__codelineno-35-3" id="__codelineno-35-3" name="__codelineno-35-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-35-4"><a href="#__codelineno-35-4" id="__codelineno-35-4" name="__codelineno-35-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-35-5"><a href="#__codelineno-35-5" id="__codelineno-35-5" name="__codelineno-35-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h3 id="zitat"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.7.18</span> ZITAT<a class="headerlink" href="#zitat" title="Permanent link">#</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">Zitat</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<p>Markdown-Code:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-36-1"><a href="#__codelineno-36-1" id="__codelineno-36-1" name="__codelineno-36-1"></a>!!! quote "Zitat"
+</span><span id="__span-36-2"><a href="#__codelineno-36-2" id="__codelineno-36-2" name="__codelineno-36-2"></a>
+</span><span id="__span-36-3"><a href="#__codelineno-36-3" id="__codelineno-36-3" name="__codelineno-36-3"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-36-4"><a href="#__codelineno-36-4" id="__codelineno-36-4" name="__codelineno-36-4"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-36-5"><a href="#__codelineno-36-5" id="__codelineno-36-5" name="__codelineno-36-5"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h2 id="code-snippets"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8</span> Code Snippets<a class="headerlink" href="#code-snippets" title="Permanent link">#</a></h2>
+<h3 id="simple-code-block-1"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.1</span> simple Code Block 1<a class="headerlink" href="#simple-code-block-1" title="Permanent link">#</a></h3>
+<div class="language-text highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre></div>
+<h3 id="simple-code-block-2"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.2</span> simple Code Block 2<a class="headerlink" href="#simple-code-block-2" title="Permanent link">#</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a href="#__codelineno-37-1" id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-37-2"><a href="#__codelineno-37-2" id="__codelineno-37-2" name="__codelineno-37-2"></a>
+</span><span id="__span-37-3"><a href="#__codelineno-37-3" id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Hello world"</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a href="#__codelineno-38-1" id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-38-2"><a href="#__codelineno-38-2" id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="nb">cd</span><span class="w"> </span>~/Arduino/hardware
+</span><span id="__span-38-3"><a href="#__codelineno-38-3" id="__codelineno-38-3" name="__codelineno-38-3"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>espressif<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-4"><a href="#__codelineno-38-4" id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="nb">cd</span><span class="w"> </span>espressif<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-5"><a href="#__codelineno-38-5" id="__codelineno-38-5" name="__codelineno-38-5"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/espressif/arduino-esp32.git<span class="w"> </span>esp32<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-6"><a href="#__codelineno-38-6" id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="nb">cd</span><span class="w"> </span>esp32/tools<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-7"><a href="#__codelineno-38-7" id="__codelineno-38-7" name="__codelineno-38-7"></a>python3<span class="w"> </span>get.py
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a href="#__codelineno-39-1" id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-39-2"><a href="#__codelineno-39-2" id="__codelineno-39-2" name="__codelineno-39-2"></a>
+</span><span id="__span-39-3"><a href="#__codelineno-39-3" id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>file
+</span><span id="__span-39-4"><a href="#__codelineno-39-4" id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="k">do</span>
+</span><span id="__span-39-5"><a href="#__codelineno-39-5" id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">    </span>rename<span class="w"> </span><span class="s1">'s/\..*/\.bu/'</span><span class="w"> </span><span class="nv">$file</span>
+</span><span id="__span-39-6"><a href="#__codelineno-39-6" id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="k">done</span><span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="k">$(</span>find<span class="w"> </span><span class="nv">$1</span><span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">1</span><span class="w"> </span>-type<span class="w"> </span>f<span class="k">)</span>
+</span></code></pre></div>
+<h3 id="codeblock-python"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.3</span> Codeblock Python<a class="headerlink" href="#codeblock-python" title="Permanent link">#</a></h3>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-40-1"><a href="#__codelineno-40-1" id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></code></pre></div>
+<h3 id="code-block-mit-titel"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.4</span> Code Block mit Titel<a class="headerlink" href="#code-block-mit-titel" title="Permanent link">#</a></h3>
+<div class="language-py highlight"><span class="filename">bubble_sort.py</span><pre><span></span><code><span id="__span-41-1"><a href="#__codelineno-41-1" id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+</span><span id="__span-41-2"><a href="#__codelineno-41-2" id="__codelineno-41-2" name="__codelineno-41-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+</span><span id="__span-41-3"><a href="#__codelineno-41-3" id="__codelineno-41-3" name="__codelineno-41-3"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+</span><span id="__span-41-4"><a href="#__codelineno-41-4" id="__codelineno-41-4" name="__codelineno-41-4"></a>            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+</span><span id="__span-41-5"><a href="#__codelineno-41-5" id="__codelineno-41-5" name="__codelineno-41-5"></a>                <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></code></pre></div>
+<h3 id="codeblock-bash"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.5</span> Codeblock Bash<a class="headerlink" href="#codeblock-bash" title="Permanent link">#</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a href="#__codelineno-42-1" id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="nv">orig</span><span class="o">=</span>schema_tableName_
+</span><span id="__span-42-2"><a href="#__codelineno-42-2" id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="nv">dest</span><span class="o">=</span>tableName_
+</span><span id="__span-42-3"><a href="#__codelineno-42-3" id="__codelineno-42-3" name="__codelineno-42-3"></a>
+</span><span id="__span-42-4"><a href="#__codelineno-42-4" id="__codelineno-42-4" name="__codelineno-42-4"></a><span class="k">for</span><span class="o">(</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="o">(</span>ls<span class="w"> </span><span class="si">${</span><span class="nv">orig</span><span class="si">}</span>*<span class="p">|</span>wc<span class="w"> </span>-l<span class="o">)</span><span class="p">;</span><span class="w"> </span>i++<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-42-5"><a href="#__codelineno-42-5" id="__codelineno-42-5" name="__codelineno-42-5"></a><span class="w">  </span>cp<span class="w"> </span><span class="si">${</span><span class="nv">orig</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">dest</span><span class="si">}</span><span class="w"> </span>-v
+</span><span id="__span-42-6"><a href="#__codelineno-42-6" id="__codelineno-42-6" name="__codelineno-42-6"></a><span class="o">}</span>
+</span></code></pre></div>
+<h3 id="codeblock-mit-annotations"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.6</span> Codeblock mit Annotations<a class="headerlink" href="#codeblock-mit-annotations" title="Permanent link">#</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-43-1"><a href="#__codelineno-43-1" id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="nt">theme</span><span class="p">:</span>
+</span><span id="__span-43-2"><a href="#__codelineno-43-2" id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+</span><span id="__span-43-3"><a href="#__codelineno-43-3" id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content.code.annotate</span><span class="w"> </span><span class="c1"># (1)</span>
+</span></code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"/> I'm a code annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be written in Markdown.</li>
+</ol>
+<h3 id="markdown-code-fur-codeblock-mit-annotations"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.7</span> Markdown Code für Codeblock mit Annotations<a class="headerlink" href="#markdown-code-fur-codeblock-mit-annotations" title="Permanent link">#</a></h3>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-44-1"><a href="#__codelineno-44-1" id="__codelineno-44-1" name="__codelineno-44-1"></a>``` yaml
+</span><span id="__span-44-2"><a href="#__codelineno-44-2" id="__codelineno-44-2" name="__codelineno-44-2"></a>theme:
+</span><span id="__span-44-3"><a href="#__codelineno-44-3" id="__codelineno-44-3" name="__codelineno-44-3"></a>  features:
+</span><span id="__span-44-4"><a href="#__codelineno-44-4" id="__codelineno-44-4" name="__codelineno-44-4"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>content.code.annotate # (1)
+</span></code></pre></div>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"/> I'm a code annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be written in Markdown.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a href="#__codelineno-45-1" id="__codelineno-45-1" name="__codelineno-45-1"></a>
+</span></code></pre></div></li>
+</ol>
+<h3 id="mit-linenumbers"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.8</span> Mit Linenumbers<a class="headerlink" href="#mit-linenumbers" title="Permanent link">#</a></h3>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
+<span class="normal"><a href="#__codelineno-46-2">2</a></span>
+<span class="normal"><a href="#__codelineno-46-3">3</a></span>
+<span class="normal"><a href="#__codelineno-46-4">4</a></span>
+<span class="normal"><a href="#__codelineno-46-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3"></a>        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4"></a>            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+</span><span id="__span-46-5"><a id="__codelineno-46-5" name="__codelineno-46-5"></a>                <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="highlighting-specific-lines"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.9</span> Highlighting specific lines<a class="headerlink" href="#highlighting-specific-lines" title="Permanent link">#</a></h3>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-47-1"><a href="#__codelineno-47-1" id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+</span><span id="__span-47-2"><a href="#__codelineno-47-2" id="__codelineno-47-2" name="__codelineno-47-2"></a><span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+</span></span><span id="__span-47-3"><a href="#__codelineno-47-3" id="__codelineno-47-3" name="__codelineno-47-3"></a><span class="hll">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+</span></span><span id="__span-47-4"><a href="#__codelineno-47-4" id="__codelineno-47-4" name="__codelineno-47-4"></a>            <span class="k">if</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+</span><span id="__span-47-5"><a href="#__codelineno-47-5" id="__codelineno-47-5" name="__codelineno-47-5"></a>                <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></code></pre></div>
+<h3 id="highlighting-specific-lines-with-linenumbers-and-arduino-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.10</span> Highlighting specific lines with LineNumbers and Arduino Code<a class="headerlink" href="#highlighting-specific-lines-with-linenumbers-and-arduino-code" title="Permanent link">#</a></h3>
+<div class="language-arduino highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-48-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-48-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-48-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-48-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-48-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-48-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-48-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-48-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-48-10">10</a></span>
+<span class="normal"><a href="#__codelineno-48-11">11</a></span>
+<span class="normal"><a href="#__codelineno-48-12">12</a></span>
+<span class="normal"><a href="#__codelineno-48-13">13</a></span>
+<span class="normal"><a href="#__codelineno-48-14">14</a></span>
+<span class="normal"><a href="#__codelineno-48-15">15</a></span>
+<span class="normal"><a href="#__codelineno-48-16">16</a></span>
+<span class="normal"><a href="#__codelineno-48-17">17</a></span>
+<span class="normal"><a href="#__codelineno-48-18">18</a></span>
+<span class="normal"><a href="#__codelineno-48-19">19</a></span>
+<span class="normal"><a href="#__codelineno-48-20">20</a></span>
+<span class="normal"><a href="#__codelineno-48-21">21</a></span>
+<span class="normal"><a href="#__codelineno-48-22">22</a></span>
+<span class="normal"><a href="#__codelineno-48-23">23</a></span>
+<span class="normal"><a href="#__codelineno-48-24">24</a></span>
+<span class="normal"><a href="#__codelineno-48-25">25</a></span>
+<span class="normal"><a href="#__codelineno-48-26">26</a></span>
+<span class="normal"><a href="#__codelineno-48-27">27</a></span>
+<span class="normal"><a href="#__codelineno-48-28">28</a></span>
+<span class="normal"><a href="#__codelineno-48-29">29</a></span>
+<span class="normal"><a href="#__codelineno-48-30">30</a></span>
+<span class="normal"><a href="#__codelineno-48-31">31</a></span>
+<span class="normal"><a href="#__codelineno-48-32">32</a></span>
+<span class="normal"><a href="#__codelineno-48-33">33</a></span>
+<span class="normal"><a href="#__codelineno-48-34">34</a></span>
+<span class="normal"><a href="#__codelineno-48-35">35</a></span>
+<span class="normal"><a href="#__codelineno-48-36">36</a></span>
+<span class="normal"><a href="#__codelineno-48-37">37</a></span>
+<span class="normal"><a href="#__codelineno-48-38">38</a></span>
+<span class="normal"><a href="#__codelineno-48-39">39</a></span>
+<span class="normal"><a href="#__codelineno-48-40">40</a></span>
+<span class="normal"><a href="#__codelineno-48-41">41</a></span>
+<span class="normal"><a href="#__codelineno-48-42">42</a></span>
+<span class="normal"><a href="#__codelineno-48-43">43</a></span>
+<span class="normal"><a href="#__codelineno-48-44">44</a></span>
+<span class="normal"><a href="#__codelineno-48-45">45</a></span>
+<span class="normal"><a href="#__codelineno-48-46">46</a></span>
+<span class="normal"><a href="#__codelineno-48-47">47</a></span>
+<span class="normal"><a href="#__codelineno-48-48">48</a></span>
+<span class="normal"><a href="#__codelineno-48-49">49</a></span>
+<span class="normal"><a href="#__codelineno-48-50">50</a></span>
+<span class="normal"><a href="#__codelineno-48-51">51</a></span>
+<span class="normal"><a href="#__codelineno-48-52">52</a></span>
+<span class="normal"><a href="#__codelineno-48-53">53</a></span>
+<span class="normal"><a href="#__codelineno-48-54">54</a></span>
+<span class="normal"><a href="#__codelineno-48-55">55</a></span>
+<span class="normal"><a href="#__codelineno-48-56">56</a></span>
+<span class="normal"><a href="#__codelineno-48-57">57</a></span>
+<span class="normal"><a href="#__codelineno-48-58">58</a></span>
+<span class="normal"><a href="#__codelineno-48-59">59</a></span>
+<span class="normal"><a href="#__codelineno-48-60">60</a></span>
+<span class="normal"><a href="#__codelineno-48-61">61</a></span>
+<span class="normal"><a href="#__codelineno-48-62">62</a></span>
+<span class="normal"><a href="#__codelineno-48-63">63</a></span>
+<span class="normal"><a href="#__codelineno-48-64">64</a></span>
+<span class="normal"><a href="#__codelineno-48-65">65</a></span>
+<span class="normal"><a href="#__codelineno-48-66">66</a></span>
+<span class="normal"><a href="#__codelineno-48-67">67</a></span>
+<span class="normal"><a href="#__codelineno-48-68">68</a></span>
+<span class="normal"><a href="#__codelineno-48-69">69</a></span>
+<span class="normal"><a href="#__codelineno-48-70">70</a></span>
+<span class="normal"><a href="#__codelineno-48-71">71</a></span>
+<span class="normal"><a href="#__codelineno-48-72">72</a></span>
+<span class="normal"><a href="#__codelineno-48-73">73</a></span>
+<span class="normal"><a href="#__codelineno-48-74">74</a></span>
+<span class="normal"><a href="#__codelineno-48-75">75</a></span>
+<span class="normal"><a href="#__codelineno-48-76">76</a></span>
+<span class="normal"><a href="#__codelineno-48-77">77</a></span>
+<span class="normal"><a href="#__codelineno-48-78">78</a></span>
+<span class="normal"><a href="#__codelineno-48-79">79</a></span>
+<span class="normal"><a href="#__codelineno-48-80">80</a></span>
+<span class="normal"><a href="#__codelineno-48-81">81</a></span>
+<span class="normal"><a href="#__codelineno-48-82">82</a></span>
+<span class="normal"><a href="#__codelineno-48-83">83</a></span>
+<span class="normal"><a href="#__codelineno-48-84">84</a></span>
+<span class="normal"><a href="#__codelineno-48-85">85</a></span>
+<span class="normal"><a href="#__codelineno-48-86">86</a></span>
+<span class="normal"><a href="#__codelineno-48-87">87</a></span>
+<span class="normal"><a href="#__codelineno-48-88">88</a></span>
+<span class="normal"><a href="#__codelineno-48-89">89</a></span>
+<span class="normal"><a href="#__codelineno-48-90">90</a></span>
+<span class="normal"><a href="#__codelineno-48-91">91</a></span>
+<span class="normal"><a href="#__codelineno-48-92">92</a></span>
+<span class="normal"><a href="#__codelineno-48-93">93</a></span>
+<span class="normal"><a href="#__codelineno-48-94">94</a></span>
+<span class="normal"><a href="#__codelineno-48-95">95</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="cm">/* </span>
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2"></a><span class="cm">  Sketch generated by the Arduino IoT Cloud Thing "Untitled 2"</span>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3"></a><span class="cm">  https://create.arduino.cc/cloud/things/3a80c051-cdbd-4f19-97a0-f303a303b5d8 </span>
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4"></a>
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5"></a><span class="cm">  Arduino IoT Cloud Variables description</span>
+</span><span id="__span-48-6"><a id="__codelineno-48-6" name="__codelineno-48-6"></a>
+</span><span id="__span-48-7"><a id="__codelineno-48-7" name="__codelineno-48-7"></a><span class="cm">  The following variables are automatically generated and updated when changes are made to the Thing</span>
+</span><span id="__span-48-8"><a id="__codelineno-48-8" name="__codelineno-48-8"></a>
+</span><span id="__span-48-9"><a id="__codelineno-48-9" name="__codelineno-48-9"></a><span class="cm">  int fan_speed;</span>
+</span><span id="__span-48-10"><a id="__codelineno-48-10" name="__codelineno-48-10"></a><span class="cm">  bool button_state;</span>
+</span><span id="__span-48-11"><a id="__codelineno-48-11" name="__codelineno-48-11"></a>
+</span><span id="__span-48-12"><a id="__codelineno-48-12" name="__codelineno-48-12"></a><span class="cm">  Variables which are marked as READ/WRITE in the Cloud Thing will also have functions</span>
+</span><span id="__span-48-13"><a id="__codelineno-48-13" name="__codelineno-48-13"></a><span class="cm">  which are called when their values are changed from the Dashboard.</span>
+</span><span id="__span-48-14"><a id="__codelineno-48-14" name="__codelineno-48-14"></a><span class="cm">  These functions are generated with the Thing and added at the end of this sketch.</span>
+</span><span id="__span-48-15"><a id="__codelineno-48-15" name="__codelineno-48-15"></a><span class="cm">*/</span>
+</span><span id="__span-48-16"><a id="__codelineno-48-16" name="__codelineno-48-16"></a>
+</span><span id="__span-48-17"><a id="__codelineno-48-17" name="__codelineno-48-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"thingProperties.h"</span>
+</span><span id="__span-48-18"><a id="__codelineno-48-18" name="__codelineno-48-18"></a>
+</span><span id="__span-48-19"><a id="__codelineno-48-19" name="__codelineno-48-19"></a><span class="hll"><span class="cp">#define PWM_KANAL_0 0</span>
+</span></span><span id="__span-48-20"><a id="__codelineno-48-20" name="__codelineno-48-20"></a><span class="hll"><span class="cp">#define PWM_KANAL_1 1</span>
+</span></span><span id="__span-48-21"><a id="__codelineno-48-21" name="__codelineno-48-21"></a><span class="hll"><span class="cp">#define PWM_AUFLOESUNG 8</span>
+</span></span><span id="__span-48-22"><a id="__codelineno-48-22" name="__codelineno-48-22"></a><span class="hll"><span class="cp">#define PWM_FREQ 5000</span>
+</span></span><span id="__span-48-23"><a id="__codelineno-48-23" name="__codelineno-48-23"></a><span class="hll"><span class="cp">#define INA_PIN 16  </span><span class="c1">// PWM-Pin</span>
+</span></span><span id="__span-48-24"><a id="__codelineno-48-24" name="__codelineno-48-24"></a><span class="hll"><span class="cp">#define INB_PIN 17  </span><span class="c1">// PWM-Pin</span>
+</span></span><span id="__span-48-25"><a id="__codelineno-48-25" name="__codelineno-48-25"></a><span class="hll"><span class="cp">#define BTN_B1 22   </span><span class="c1">// Button B1 an GPIO 22</span>
+</span></span><span id="__span-48-26"><a id="__codelineno-48-26" name="__codelineno-48-26"></a><span class="hll">
+</span></span><span id="__span-48-27"><a id="__codelineno-48-27" name="__codelineno-48-27"></a><span class="hll">
+</span></span><span id="__span-48-28"><a id="__codelineno-48-28" name="__codelineno-48-28"></a><span class="hll"><span class="c1">// int maxTV = pow(2,PWMA_AUFLOESUNG)-1; // Bei 8 Bit = 0-255</span>
+</span></span><span id="__span-48-29"><a id="__codelineno-48-29" name="__codelineno-48-29"></a><span class="hll">
+</span></span><span id="__span-48-30"><a id="__codelineno-48-30" name="__codelineno-48-30"></a><span class="hll">
+</span></span><span id="__span-48-31"><a id="__codelineno-48-31" name="__codelineno-48-31"></a><span class="hll"><span class="cm">/*     L9110H Control </span>
+</span></span><span id="__span-48-32"><a id="__codelineno-48-32" name="__codelineno-48-32"></a><span class="hll"><span class="cm"> *    INPUT    </span>
+</span></span><span id="__span-48-33"><a id="__codelineno-48-33" name="__codelineno-48-33"></a><span class="hll"><span class="cm"> *  INA  INA    Function</span>
+</span></span><span id="__span-48-34"><a id="__codelineno-48-34" name="__codelineno-48-34"></a><span class="hll"><span class="cm"> *  ===========================</span>
+</span></span><span id="__span-48-35"><a id="__codelineno-48-35" name="__codelineno-48-35"></a><span class="hll"><span class="cm"> *  L     L     OFF</span>
+</span></span><span id="__span-48-36"><a id="__codelineno-48-36" name="__codelineno-48-36"></a><span class="hll"><span class="cm"> *  H     L     FORWARD CW</span>
+</span></span><span id="__span-48-37"><a id="__codelineno-48-37" name="__codelineno-48-37"></a><span class="hll"><span class="cm"> *  L     H     REVERSE CCW</span>
+</span></span><span id="__span-48-38"><a id="__codelineno-48-38" name="__codelineno-48-38"></a><span class="hll"><span class="cm"> *  H     H     OFF </span>
+</span></span><span id="__span-48-39"><a id="__codelineno-48-39" name="__codelineno-48-39"></a><span class="hll"><span class="cm"> */</span>
+</span></span><span id="__span-48-40"><a id="__codelineno-48-40" name="__codelineno-48-40"></a><span class="hll">
+</span></span><span id="__span-48-41"><a id="__codelineno-48-41" name="__codelineno-48-41"></a><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">maxspeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
+</span></span><span id="__span-48-42"><a id="__codelineno-48-42" name="__codelineno-48-42"></a><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">minspeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span></span><span id="__span-48-43"><a id="__codelineno-48-43" name="__codelineno-48-43"></a><span class="hll"><span class="kr">int</span><span class="w"> </span><span class="n">speed</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span id="__span-48-44"><a id="__codelineno-48-44" name="__codelineno-48-44"></a>
+</span><span id="__span-48-45"><a id="__codelineno-48-45" name="__codelineno-48-45"></a>
+</span><span id="__span-48-46"><a id="__codelineno-48-46" name="__codelineno-48-46"></a><span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-48-47"><a id="__codelineno-48-47" name="__codelineno-48-47"></a><span class="w">  </span><span class="c1">// Initialize serial and wait for port to open:</span>
+</span><span id="__span-48-48"><a id="__codelineno-48-48" name="__codelineno-48-48"></a><span class="w">  </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-48-49"><a id="__codelineno-48-49" name="__codelineno-48-49"></a><span class="w">  </span><span class="c1">// This delay gives the chance to wait for a Serial Monitor without blocking if none is found</span>
+</span><span id="__span-48-50"><a id="__codelineno-48-50" name="__codelineno-48-50"></a><span class="w">  </span><span class="nf">delay</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-48-51"><a id="__codelineno-48-51" name="__codelineno-48-51"></a>
+</span><span id="__span-48-52"><a id="__codelineno-48-52" name="__codelineno-48-52"></a><span class="hll"><span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">BTN_B1</span><span class="p">,</span><span class="w"> </span><span class="kr">INPUT</span><span class="p">);</span><span class="w">   </span><span class="c1">// Button Pin ist Input</span>
+</span></span><span id="__span-48-53"><a id="__codelineno-48-53" name="__codelineno-48-53"></a><span class="hll"><span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">INA_PIN</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+</span></span><span id="__span-48-54"><a id="__codelineno-48-54" name="__codelineno-48-54"></a><span class="hll"><span class="w">  </span><span class="nf">pinMode</span><span class="p">(</span><span class="n">INB_PIN</span><span class="p">,</span><span class="kr">OUTPUT</span><span class="p">);</span>
+</span></span><span id="__span-48-55"><a id="__codelineno-48-55" name="__codelineno-48-55"></a><span class="hll"><span class="w">  </span><span class="n">ledcSetup</span><span class="p">(</span><span class="n">PWM_KANAL_0</span><span class="p">,</span><span class="n">PWM_FREQ</span><span class="p">,</span><span class="n">PWM_AUFLOESUNG</span><span class="p">);</span>
+</span></span><span id="__span-48-56"><a id="__codelineno-48-56" name="__codelineno-48-56"></a><span class="hll"><span class="w">  </span><span class="n">ledcSetup</span><span class="p">(</span><span class="n">PWM_KANAL_1</span><span class="p">,</span><span class="n">PWM_FREQ</span><span class="p">,</span><span class="n">PWM_AUFLOESUNG</span><span class="p">);</span>
+</span></span><span id="__span-48-57"><a id="__codelineno-48-57" name="__codelineno-48-57"></a><span class="hll"><span class="w">  </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">INA_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">PWM_KANAL_0</span><span class="p">);</span>
+</span></span><span id="__span-48-58"><a id="__codelineno-48-58" name="__codelineno-48-58"></a><span class="hll"><span class="w">  </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">INB_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">PWM_KANAL_1</span><span class="p">);</span>
+</span></span><span id="__span-48-59"><a id="__codelineno-48-59" name="__codelineno-48-59"></a>
+</span><span id="__span-48-60"><a id="__codelineno-48-60" name="__codelineno-48-60"></a><span class="w">  </span><span class="c1">// Defined in thingProperties.h</span>
+</span><span id="__span-48-61"><a id="__codelineno-48-61" name="__codelineno-48-61"></a><span class="w">  </span><span class="n">initProperties</span><span class="p">();</span>
+</span><span id="__span-48-62"><a id="__codelineno-48-62" name="__codelineno-48-62"></a>
+</span><span id="__span-48-63"><a id="__codelineno-48-63" name="__codelineno-48-63"></a><span class="w">  </span><span class="c1">// Connect to Arduino IoT Cloud</span>
+</span><span id="__span-48-64"><a id="__codelineno-48-64" name="__codelineno-48-64"></a><span class="w">  </span><span class="n">ArduinoCloud</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ArduinoIoTPreferredConnection</span><span class="p">);</span>
+</span><span id="__span-48-65"><a id="__codelineno-48-65" name="__codelineno-48-65"></a>
+</span><span id="__span-48-66"><a id="__codelineno-48-66" name="__codelineno-48-66"></a><span class="w">  </span><span class="cm">/*</span>
+</span><span id="__span-48-67"><a id="__codelineno-48-67" name="__codelineno-48-67"></a><span class="cm">     The following function allows you to obtain more information</span>
+</span><span id="__span-48-68"><a id="__codelineno-48-68" name="__codelineno-48-68"></a><span class="cm">     related to the state of network and IoT Cloud connection and errors</span>
+</span><span id="__span-48-69"><a id="__codelineno-48-69" name="__codelineno-48-69"></a><span class="cm">     the higher number the more granular information you’ll get.</span>
+</span><span id="__span-48-70"><a id="__codelineno-48-70" name="__codelineno-48-70"></a><span class="cm">     The default is 0 (only errors).</span>
+</span><span id="__span-48-71"><a id="__codelineno-48-71" name="__codelineno-48-71"></a><span class="cm">     Maximum is 4</span>
+</span><span id="__span-48-72"><a id="__codelineno-48-72" name="__codelineno-48-72"></a><span class="cm"> */</span>
+</span><span id="__span-48-73"><a id="__codelineno-48-73" name="__codelineno-48-73"></a><span class="w">  </span><span class="n">setDebugMessageLevel</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span><span id="__span-48-74"><a id="__codelineno-48-74" name="__codelineno-48-74"></a><span class="w">  </span><span class="n">ArduinoCloud</span><span class="p">.</span><span class="n">printDebugInfo</span><span class="p">();</span>
+</span><span id="__span-48-75"><a id="__codelineno-48-75" name="__codelineno-48-75"></a><span class="p">}</span>
+</span><span id="__span-48-76"><a id="__codelineno-48-76" name="__codelineno-48-76"></a>
+</span><span id="__span-48-77"><a id="__codelineno-48-77" name="__codelineno-48-77"></a><span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-48-78"><a id="__codelineno-48-78" name="__codelineno-48-78"></a><span class="w">  </span><span class="n">ArduinoCloud</span><span class="p">.</span><span class="n">update</span><span class="p">();</span>
+</span><span id="__span-48-79"><a id="__codelineno-48-79" name="__codelineno-48-79"></a><span class="w">  </span><span class="c1">// Your code here </span>
+</span><span id="__span-48-80"><a id="__codelineno-48-80" name="__codelineno-48-80"></a><span class="hll"><span class="w">  </span><span class="n">button_state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="nf">digitalRead</span><span class="p">(</span><span class="n">BTN_B1</span><span class="p">));</span>
+</span></span><span id="__span-48-81"><a id="__codelineno-48-81" name="__codelineno-48-81"></a>
+</span><span id="__span-48-82"><a id="__codelineno-48-82" name="__codelineno-48-82"></a><span class="p">}</span>
+</span><span id="__span-48-83"><a id="__codelineno-48-83" name="__codelineno-48-83"></a>
+</span><span id="__span-48-84"><a id="__codelineno-48-84" name="__codelineno-48-84"></a>
+</span><span id="__span-48-85"><a id="__codelineno-48-85" name="__codelineno-48-85"></a>
+</span><span id="__span-48-86"><a id="__codelineno-48-86" name="__codelineno-48-86"></a>
+</span><span id="__span-48-87"><a id="__codelineno-48-87" name="__codelineno-48-87"></a><span class="cm">/*</span>
+</span><span id="__span-48-88"><a id="__codelineno-48-88" name="__codelineno-48-88"></a><span class="cm">  Since FanSpeed is READ_WRITE variable, onFanSpeedChange() is</span>
+</span><span id="__span-48-89"><a id="__codelineno-48-89" name="__codelineno-48-89"></a><span class="cm">  executed every time a new value is received from IoT Cloud.</span>
+</span><span id="__span-48-90"><a id="__codelineno-48-90" name="__codelineno-48-90"></a><span class="cm">*/</span>
+</span><span id="__span-48-91"><a id="__codelineno-48-91" name="__codelineno-48-91"></a><span class="kr">void</span><span class="w"> </span><span class="nf">onFanSpeedChange</span><span class="p">()</span><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-48-92"><a id="__codelineno-48-92" name="__codelineno-48-92"></a><span class="w">  </span><span class="c1">// Add your code here to act upon FanSpeed change</span>
+</span><span id="__span-48-93"><a id="__codelineno-48-93" name="__codelineno-48-93"></a><span class="hll"><span class="w">  </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">PWM_KANAL_0</span><span class="p">,</span><span class="n">fan_speed</span><span class="p">);</span><span class="w">                 </span><span class="c1">// INA = 255</span>
+</span></span><span id="__span-48-94"><a id="__codelineno-48-94" name="__codelineno-48-94"></a><span class="hll"><span class="w">  </span><span class="n">ledcWrite</span><span class="p">(</span><span class="n">PWM_KANAL_1</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w">                        </span><span class="c1">// INB = 0</span>
+</span></span><span id="__span-48-95"><a id="__codelineno-48-95" name="__codelineno-48-95"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="inline-code-block"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.8.11</span> Inline Code Block<a class="headerlink" href="#inline-code-block" title="Permanent link">#</a></h3>
+<p>The <code class="language-python highlight"><span class="nb">range</span><span class="p">()</span></code> function is used to generate a sequence of numbers.</p>
+<h2 id="emojis"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.9</span> Emojis<a class="headerlink" href="#emojis" title="Permanent link">#</a></h2>
+<p><img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f604.svg" title=":smile:"/>
+<img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f609.svg" title=":wink:"/>
+<img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:"/>
+<img alt="😆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f606.svg" title=":laughing:"/>
+<img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f622.svg" title=":cry:"/>
+<img alt="🍎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f34e.svg" title=":apple:"/>
+<img alt="🏫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f3eb.svg" title=":school:"/>
+<img alt="🐱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f431.svg" title=":cat:"/>
+<img alt="🐶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f436.svg" title=":dog:"/>
+<img alt="🐮" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f42e.svg" title=":cow:"/>
+<img alt="🎿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f3bf.svg" title=":ski:"/>
+<img alt="🚲" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f6b2.svg" title=":bicycle:"/>
+<span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M464 256a208 208 0 1 0-416 0 208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0zm130.7 57.9c-4.2-13.6 7.1-25.9 21.3-25.9h212.5c14.2 0 25.5 12.4 21.3 25.9C369 368.4 318.2 408 258.2 408s-110.8-39.6-127.5-94.1zM144.4 192a32 32 0 1 1 64 0 32 32 0 1 1-64 0zm165.8 21.7c-7.6 8.1-20.2 8.5-28.3.9s-8.5-20.2-.9-28.3c14.5-15.5 35.2-22.3 54.6-22.3s40.1 6.8 54.6 22.3c7.6 8.1 7.1 20.7-.9 28.3s-20.7 7.1-28.3-.9c-5.5-5.8-14.8-9.7-25.4-9.7s-19.9 3.8-25.4 9.7z"></path></svg></span></p>
+<h2 id="text-mit-fussnoten"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.10</span> Text mit Fussnoten<a class="headerlink" href="#text-mit-fussnoten" title="Permanent link">#</a></h2>
+<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+<p>ipsum Lorem ipsum Lorem ipsum Lorem ipsum<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+<h3 id="markdown-code-fur-fussnoten"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.10.1</span> Markdown Code für Fussnoten<a class="headerlink" href="#markdown-code-fur-fussnoten" title="Permanent link">#</a></h3>
+<p></p><div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a href="#__codelineno-49-1" id="__codelineno-49-1" name="__codelineno-49-1"></a>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem[^1] ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+</span><span id="__span-49-2"><a href="#__codelineno-49-2" id="__codelineno-49-2" name="__codelineno-49-2"></a>
+</span><span id="__span-49-3"><a href="#__codelineno-49-3" id="__codelineno-49-3" name="__codelineno-49-3"></a>ipsum Lorem ipsum Lorem ipsum Lorem ipsum[^2] Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+</span><span id="__span-49-4"><a href="#__codelineno-49-4" id="__codelineno-49-4" name="__codelineno-49-4"></a>
+</span><span id="__span-49-5"><a href="#__codelineno-49-5" id="__codelineno-49-5" name="__codelineno-49-5"></a>[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</span><span id="__span-49-6"><a href="#__codelineno-49-6" id="__codelineno-49-6" name="__codelineno-49-6"></a>
+</span><span id="__span-49-7"><a href="#__codelineno-49-7" id="__codelineno-49-7" name="__codelineno-49-7"></a>[^2]:
+</span><span id="__span-49-8"><a href="#__codelineno-49-8" id="__codelineno-49-8" name="__codelineno-49-8"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-49-9"><a href="#__codelineno-49-9" id="__codelineno-49-9" name="__codelineno-49-9"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-49-10"><a href="#__codelineno-49-10" id="__codelineno-49-10" name="__codelineno-49-10"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+eingebettet in einer Annotation geht auch
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a href="#__codelineno-50-1" id="__codelineno-50-1" name="__codelineno-50-1"></a>!!! tip "Tip"
+</span><span id="__span-50-2"><a href="#__codelineno-50-2" id="__codelineno-50-2" name="__codelineno-50-2"></a>
+</span><span id="__span-50-3"><a href="#__codelineno-50-3" id="__codelineno-50-3" name="__codelineno-50-3"></a>    ```
+</span><span id="__span-50-4"><a href="#__codelineno-50-4" id="__codelineno-50-4" name="__codelineno-50-4"></a>    Lorem ipsum dolor sit amet[^3], consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-50-5"><a href="#__codelineno-50-5" id="__codelineno-50-5" name="__codelineno-50-5"></a>    nulla. Curabitur feugiat, tortor non consequat[^4] finibus, justo purus auctor
+</span><span id="__span-50-6"><a href="#__codelineno-50-6" id="__codelineno-50-6" name="__codelineno-50-6"></a>    massa, nec semper lorem quam in massa.
+</span><span id="__span-50-7"><a href="#__codelineno-50-7" id="__codelineno-50-7" name="__codelineno-50-7"></a>    ```
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a href="#__codelineno-51-1" id="__codelineno-51-1" name="__codelineno-51-1"></a>[^3]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</span><span id="__span-51-2"><a href="#__codelineno-51-2" id="__codelineno-51-2" name="__codelineno-51-2"></a>
+</span><span id="__span-51-3"><a href="#__codelineno-51-3" id="__codelineno-51-3" name="__codelineno-51-3"></a>[^4]:
+</span><span id="__span-51-4"><a href="#__codelineno-51-4" id="__codelineno-51-4" name="__codelineno-51-4"></a>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+</span><span id="__span-51-5"><a href="#__codelineno-51-5" id="__codelineno-51-5" name="__codelineno-51-5"></a>    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+</span><span id="__span-51-6"><a href="#__codelineno-51-6" id="__codelineno-51-6" name="__codelineno-51-6"></a>    massa, nec semper lorem quam in massa.
+</span></code></pre></div>
+<h2 id="arrows-in-markdown"><span class="enumerate-headings-plugin enumerate-heading-plugin">13.11</span> Arrows in Markdown<a class="headerlink" href="#arrows-in-markdown" title="Permanent link">#</a></h2>
+<p>↔
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a href="#__codelineno-52-1" id="__codelineno-52-1" name="__codelineno-52-1"></a>&amp;harr;
+</span></code></pre></div>
+<p>↑</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a href="#__codelineno-53-1" id="__codelineno-53-1" name="__codelineno-53-1"></a>&amp;uarr;
+</span></code></pre></div>
+<p>↓</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a href="#__codelineno-54-1" id="__codelineno-54-1" name="__codelineno-54-1"></a>&amp;darr;
+</span></code></pre></div>
+<p>←</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a href="#__codelineno-55-1" id="__codelineno-55-1" name="__codelineno-55-1"></a>&amp;larr;
+</span></code></pre></div>
+<p>→</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a href="#__codelineno-56-1" id="__codelineno-56-1" name="__codelineno-56-1"></a>&amp;rarr;
+</span></code></pre></div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div></div>
+<script src="../pyodide-mkdocs/ide.js"></script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Projektauftrag" class="md-footer__link md-footer__link--prev" href="../teil3pauftrag/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Projektauftrag
+              </div>
+</div>
+</a>
+<a aria-label="Next: InstJournal" class="md-footer__link md-footer__link--next" href="../installationsjournal/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                InstJournal
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 Thomas Jäggi
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link", "navigation.footer"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+<script src="../javascripts/extra.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+</body>
+</html>

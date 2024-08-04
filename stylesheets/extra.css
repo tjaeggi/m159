@@ -1,0 +1,68 @@
+[data-md-color-scheme] {
+    --md-typeset-table-color--light: rgba(16, 153, 123, 0.08);
+  }
+
+
+  [data-md-color-scheme="slate"] {
+    --md-typeset-table-color--light: rgba(255, 255, 0, .08);
+  }
+
+  
+th, td {
+    border: 1px solid var(--md-typeset-table-color);
+    border-spacing: 0;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+}
+
+.md-typeset__table {
+    line-height: 1;
+}
+
+.md-typeset__table table:not([class]) {
+    font-size: .74rem;
+    border-right: none;
+}
+
+.md-typeset__table table:not([class]) td,
+.md-typeset__table table:not([class]) th {
+    padding: 9px;
+}
+
+/* light mode alternating table bg colors */
+.md-typeset__table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+/* dark mode alternating table bg colors */
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
+    background-color: hsla(var(--md-hue),25%,25%,1)
+}
+
+
+table th {
+    background-color: #98a6e2;
+   /* sets table header cell background colour */
+}
+
+:root > * {
+    --md-code-hl-color: #0FF1CE;
+    --md-code-bg-color: #0fa3dd;
+    --md-code-fg-color: #5a97e6;
+    --md-code-hl-number-color: #e21507;
+    ## --md-default-fg-color--light: #0f0f0f;
+
+  }
+
+  .youtube {
+    color: #EE0F0F;
+  }
+
+  /* Extra CSS for mkdocs-enumerate-headings-plugin */ 
+/*.enumerate-headings-plugin {
+    filter: opacity(95%);
+  }*/
+
+
+  
